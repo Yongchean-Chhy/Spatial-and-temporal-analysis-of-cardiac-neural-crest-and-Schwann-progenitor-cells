@@ -1,0 +1,76 @@
+cell_id,nGene,nUMI,experiment,Phase,res.0.7,celltype,state,cnc_score,schwann_score,predicted_subtype,PC1,PC2
+AAAGTAGCAGTAACGG.1,2870,9319,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,55.0,Schwann progenitor-like,-4.7505529831576965,5.58334682300169
+AAGGAGCGTGCAACGA.1,1766,3838,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,6.5,0.0,Cardiac neural crest-like,-15.167064598533896,-6.920386337995092
+ACACTGAGTATGAAAC.1,3101,10580,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,11.0,Schwann progenitor-like,-1.5029992097993012,5.738189555448657
+ACATCAGAGCAGACTG.1,2726,7585,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,41.0,0.0,Cardiac neural crest-like,-5.45881551020246,-8.105086747129171
+ACTATCTAGCAATATG.1,5283,25311,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,136.0,0.0,Cardiac neural crest-like,39.444888360191264,-15.117080872889508
+ACTTTCACATATGGTC.1,3964,13016,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,76.5,0.0,Cardiac neural crest-like,6.599033566108512,-12.713287299594935
+AGAATAGCACGCATCG.1,2968,9498,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,37.5,0.0,Cardiac neural crest-like,-0.35440077811626086,-6.506441535056891
+AGGGTGACAGATGGGT.1,2003,5585,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,6.0,Schwann progenitor-like,-12.475051388521033,1.4744142347126195
+AGTGTCATCTGTGCAA.1,4117,16682,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,125.5,0.0,Cardiac neural crest-like,17.68448605008534,-11.479934297045688
+ATCCACCTCGGATGGA.1,2710,9999,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,58.0,Schwann progenitor-like,-2.8517829106796233,8.69912351294316
+ATTACTCCACCCAGTG.1,3149,12181,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,15.0,Schwann progenitor-like,3.888149483570768,9.20667236952095
+CACATAGCACCGAATT.1,2541,7536,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,15.0,Schwann progenitor-like,-7.757986613281828,0.9808293717293518
+CACATTTCACGAAACG.1,2927,9709,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,7.0,Schwann progenitor-like,-4.171931567325666,6.363595930409682
+CATCGAAAGTGAAGTT.1,3608,13762,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,10.0,Schwann progenitor-like,6.066259286738309,8.874112790045196
+CCGGGATCAAACCTAC.1,6561,40542,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,32.0,7.0,Cardiac neural crest-like,71.6803571257251,33.10125507080577
+CCGGTAGGTCGACTAT.1,3702,19293,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,2.0,32.0,Schwann progenitor-like,24.30143652041713,15.267338852465363
+CCGTTCACACCGAATT.1,2860,10051,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.5,37.0,Schwann progenitor-like,-1.3673614010103805,6.645474506081196
+CCTACCAGTCAAGCGA.1,2721,8485,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,12.0,Schwann progenitor-like,-7.025354147107804,4.415945985212072
+CCTAGCTAGGAGTAGA.1,2402,7025,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.5,3.0,Schwann progenitor-like,-7.543022842064096,-2.607031378121606
+CCTTCCCGTGGGTCAA.1,2991,9034,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,28.0,Schwann progenitor-like,-5.574399445445269,1.4536333672627089
+CCTTCGACAATGTAAG.1,1939,4913,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,20.0,Schwann progenitor-like,-14.495679750094682,0.15073574982676768
+CCTTTCTTCACCTTAT.1,2392,5834,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,40.0,0.0,Cardiac neural crest-like,-10.633239202118185,-7.498855151640558
+CGAGCACCATTATCTC.1,2425,6922,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,13.0,Schwann progenitor-like,-9.93062184857603,2.5552739942809284
+CGATTGACACCGGAAA.1,2319,8472,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,67.0,Schwann progenitor-like,-4.408842609545385,5.729156276559954
+CGATTGACAGCGTCCA.1,2055,5107,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,23.0,Schwann progenitor-like,-13.080179528071904,-1.5667705693116025
+CGCGTTTGTGCAACGA.1,2240,5729,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,8.0,0.0,Cardiac neural crest-like,-10.62793851728932,-3.0938798805626018
+CGCTGGACATCTACGA.1,2648,7973,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,52.0,Schwann progenitor-like,-7.246497115255405,2.5530043737358223
+CGGACTGGTCCCGACA.1,2103,4731,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,13.0,0.0,Cardiac neural crest-like,-13.584734860017083,-6.565934817843548
+CGGAGTCGTCCGAATT.1,2555,7687,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.5,45.0,Schwann progenitor-like,-8.076627292684051,3.5319028014468334
+CGTAGCGCATCTGGTA.1,2463,9789,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,58.0,0.0,Cardiac neural crest-like,2.495310792715181,-4.415835424899709
+CGTCAGGTCATGTCCC.1,2460,7930,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,44.0,Schwann progenitor-like,-5.965678607173569,3.2664473460294094
+CTAGTGAGTTAGTGGG.1,3511,11867,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,52.0,1.0,Cardiac neural crest-like,6.640461461509407,-11.785378513720339
+CTCCTAGCACGCTTTC.1,3044,10466,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,59.0,Schwann progenitor-like,-2.032776087184727,6.956331344263874
+CTCGGGACAGCAGTTT.1,2780,9115,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,10.0,Schwann progenitor-like,-4.2458964445303105,4.975162625129094
+CTTCTCTTCCAGAAGG.1,2031,5206,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,3.0,0.0,Cardiac neural crest-like,-12.316010885024925,-2.8415012453310853
+GAATGAAAGTTAGCGG.1,3763,13512,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,17.0,0.0,Cardiac neural crest-like,9.337559592421101,-8.13005399245623
+GACGTTATCCAGAGGA.1,3280,10730,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.5,51.0,Schwann progenitor-like,-0.8942719391454252,5.17894250959851
+GATCGATGTCGATTGT.1,2952,8791,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,3.5,1.0,Cardiac neural crest-like,-3.8426601394862967,-5.238401436115823
+GATCTAGAGGTCATCT.1,2941,10741,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.5,90.0,Schwann progenitor-like,-0.7497010030478236,8.751695425844174
+GATGAAATCCGCGTTT.1,4466,18266,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,65.5,0.0,Cardiac neural crest-like,19.52191316586839,-7.14949125194365
+GCGCAGTAGACCACGA.1,2355,6476,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,5.0,0.0,Cardiac neural crest-like,-8.603969185840443,-4.533155873095458
+GGAAAGCCAGTAGAGC.1,2133,6633,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,4.0,Schwann progenitor-like,-9.55723773002971,2.2748044655424575
+GGACATTCAAGCCCAC.1,2164,6200,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,23.0,Schwann progenitor-like,-11.021881030229876,0.5789962837556657
+GGGAATGAGGCCCTTG.1,2144,5558,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,0.0,Schwann progenitor-like,-11.627827323763421,-2.111495273448756
+GGGAGATCAGTTTACG.1,2526,7446,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,41.0,Schwann progenitor-like,-8.506249460322802,2.8717967185966082
+GGGATGAAGACCACGA.1,4913,23524,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,160.5,0.0,Cardiac neural crest-like,36.41653446873791,-13.288954558778263
+GGGTTGCTCCCATTAT.1,2437,6366,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,38.0,0.0,Cardiac neural crest-like,-8.13509867134809,-7.81310489406188
+GGGTTGCTCGAGAGCA.1,4362,17604,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,75.0,Schwann progenitor-like,14.037940876008278,11.826410277195658
+GTACTTTAGGCCCTCA.1,3016,10407,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,22.0,Schwann progenitor-like,-0.7437452810483228,5.433619954185152
+GTCAAGTTCCGCGTTT.1,2099,6007,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,0.0,Schwann progenitor-like,-11.544692727467485,1.3168226032061767
+GTCGGGTCATCGACGC.1,2621,8554,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,3.0,Schwann progenitor-like,-5.821668480552081,4.726603153830497
+GTCGGGTGTACACCGC.1,2455,7985,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,28.0,Schwann progenitor-like,-7.075299969909954,4.43152354054613
+GTCTTCGAGAGGGCTT.1,3652,12013,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,5.0,1.0,Cardiac neural crest-like,4.1964647028157,-4.286713465667802
+GTCTTCGGTAGCTAAA.1,2359,7637,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,27.0,Schwann progenitor-like,-7.446580803787225,3.840216095253599
+GTGCATAAGACTTTCG.1,2450,6706,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,10.5,0.0,Cardiac neural crest-like,-8.222467192194312,-3.5001583988038627
+GTGTTAGTCTAACGGT.1,2251,7485,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.5,12.0,Schwann progenitor-like,-8.084888237142097,3.9394937314494816
+TACGGTAAGCCCAGCT.1,2928,9462,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,32.0,Schwann progenitor-like,-3.4274600487844857,2.5153115852461636
+TAGTTGGGTCTGCAAT.1,2418,6477,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,12.5,0.0,Cardiac neural crest-like,-8.95381662670102,-1.6749157642253805
+TATCTCATCACCATAG.1,3212,11524,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,23.0,0.0,Cardiac neural crest-like,3.154967958913974,-5.266035983582571
+TCAATCTTCGACCAGC.1,1945,6091,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,4.5,0.0,Cardiac neural crest-like,-8.898292265184097,-6.682864049998551
+TCAATCTTCGTCCGTT.1,2930,8268,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,22.5,0.0,Cardiac neural crest-like,-4.284950004966008,-7.519258537110144
+TCAGATGCATAACCTG.1,2614,8774,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,8.0,Schwann progenitor-like,-4.983711926300056,4.034987385321827
+TCAGCAAGTAGCACGA.1,2321,8060,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,1.5,1.0,Cardiac neural crest-like,-4.489209673460399,3.903279746386781
+TCAGCAATCATCGCTC.1,3494,11238,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,97.5,0.0,Cardiac neural crest-like,4.088702038807945,-11.273645916188626
+TCATTACTCAAGGTAA.1,2293,7189,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,47.0,Schwann progenitor-like,-9.28919060053054,3.1402776345612557
+TCGCGAGGTAAAGTCA.1,4050,17780,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,1.0,20.0,Schwann progenitor-like,15.185475610508448,14.244151322554591
+TCGGTAAAGAATCTCC.1,2033,5883,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.5,11.0,Schwann progenitor-like,-11.880073685172329,2.0738181633557313
+TCGGTAAGTCTCACCT.1,2479,7062,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,38.0,Schwann progenitor-like,-10.231274354061647,3.2135176607484204
+TGAGCATAGACGCACA.1,5588,24344,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,129.5,0.0,Cardiac neural crest-like,33.2056325676859,-16.28682793840724
+TGCTGCTTCCTGCCAT.1,3138,10661,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,27.0,Schwann progenitor-like,-1.108295087803924,5.048359402221922
+TGGTTCCAGGATATAC.1,2416,7067,Exp_1,S,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,38.0,Schwann progenitor-like,-9.773041067264018,0.7295813325223135
+TTAACTCAGTCTCAAC.1,3395,11331,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,0.0,40.0,Schwann progenitor-like,-0.4085662876063396,5.139116854534641
+TTCTTAGTCTAGAGTC.1,6200,34092,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,170.0,0.0,Cardiac neural crest-like,62.83443157112882,-14.357893415643263
+TTGCCGTTCCTAAGTG.1,3787,13626,Exp_1,G1,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,82.5,0.0,Cardiac neural crest-like,9.225847102273239,-11.372201360883906
+TTGTAGGTCCAGAGGA.1,2220,6504,Exp_1,G2M,14,Cardiac neural crest cells & Schwann progenitor cells,Singlet,18.0,0.0,Cardiac neural crest-like,-7.754285356269518,-5.032696545815121
