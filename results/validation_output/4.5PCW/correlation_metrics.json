@@ -1,0 +1,14 @@
+{
+  "cNCC": {
+    "pearson_r": -0.005860618390268175,
+    "pearson_p": 0.7438529871234638,
+    "spearman_r": -0.005973224112514535,
+    "spearman_p": 0.7391088796702301
+  },
+  "SPC": {
+    "pearson_r": NaN,
+    "pearson_p": NaN,
+    "spearman_r": NaN,
+    "spearman_p": NaN
+  }
+}

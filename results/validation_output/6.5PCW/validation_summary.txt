@@ -1,0 +1,12 @@
+
+===== VALIDATION SUMMARY [6.5PCW] =====
+
+cNCC:
+  Pearson r  = -0.002 (p=9.241e-01)
+  Spearman r = -0.009 (p=6.074e-01)
+  Weak concordance
+
+SPC:
+  Pearson r  = -0.061 (p=6.705e-04)
+  Spearman r = -0.065 (p=3.131e-04)
+  Weak concordance
