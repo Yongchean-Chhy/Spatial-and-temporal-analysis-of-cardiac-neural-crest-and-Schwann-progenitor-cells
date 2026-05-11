@@ -45,7 +45,7 @@ def load_scrna(tsv_path):
     print(f"  Cell types found: {df['celltype'].unique().tolist() if 'celltype' in df.columns else 'NO celltype COLUMN'}")
 
     adata = ad.AnnData(
-        X   = np.zeros((len(df), 1)),  # no counts — metadata only file
+        X   = np.zeros((len(df), 1)), 
         obs = df.copy(),
         var = pd.DataFrame(index=["placeholder"])
     )
@@ -63,11 +63,10 @@ def load_iss(csv_path, pcw_label):
     print(f"  Loading ISS ({pcw_label}) from: {csv_path}")
     df = pd.read_csv(csv_path)
 
-    # Use cell_id as index if available, else default integer index
     if "cell_id" in df.columns:
         df.index = df["cell_id"].astype(str)
 
-    df["PCW"] = pcw_label  # tag with timepoint
+    df["PCW"] = pcw_label  
 
     adata = ad.AnnData(
         X   = np.zeros((len(df), 1)),
@@ -86,7 +85,7 @@ def ensembl_to_symbols(ensembl_ids):
     to gene symbols using MyGeneInfo.
     Returns a dict: {ensembl_base -> symbol}, unmapped IDs keep their base ID.
     """
-    # Strip version suffix
+  
     base_ids = [e.split(".")[0] for e in ensembl_ids]
 
     if not MYGENE_AVAILABLE:
@@ -100,7 +99,7 @@ def ensembl_to_symbols(ensembl_ids):
     mapping = {}
     for r in results:
         base = r["query"]
-        mapping[base] = r.get("symbol", base)  # fall back to base ID if no symbol
+        mapping[base] = r.get("symbol", base) 
 
     unmapped = sum(1 for v in mapping.values() if v == v and "ENSG" in str(v))
     if unmapped:
@@ -120,21 +119,18 @@ def load_st(metadata_path, matrix_path):
     Metadata layout: rows = spots, matched to matrix columns on index.
     """
     print(f"  Loading ST matrix from: {matrix_path}")
-    # rows=genes, cols=spots → transpose to spots x genes
+ 
     matrix = pd.read_csv(matrix_path, sep="\t", index_col=0).T
-    # matrix.index = spot barcodes, matrix.columns = ENSEMBL IDs
 
     print(f"  Loading ST metadata from: {metadata_path}")
     metadata = pd.read_csv(metadata_path, sep="\t", index_col=0)
 
-    # Align spots present in both files
     common = matrix.index.intersection(metadata.index)
     if len(common) < len(matrix):
         print(f"  Warning: {len(matrix) - len(common)} spots dropped (not in metadata).")
     matrix   = matrix.loc[common]
     metadata = metadata.loc[common]
 
-    # Map ENSEMBL IDs -> gene symbols
     symbol_map  = ensembl_to_symbols(matrix.columns.tolist())
     base_ids    = [e.split(".")[0] for e in matrix.columns]
     gene_symbols = [symbol_map.get(b, b) for b in base_ids]
@@ -146,7 +142,6 @@ def load_st(metadata_path, matrix_path):
     )
     adata.var_names_make_unique()
 
-    # Store spatial coords if available
     if "new_x" in metadata.columns and "new_y" in metadata.columns:
         adata.obsm["spatial"] = metadata[["new_x", "new_y"]].values.astype(float)
 
@@ -174,7 +169,6 @@ def run_st_temporal_pipeline(st_metadata_path, st_matrix_path, save_dir):
 
     adata_st = load_st(st_metadata_path, st_matrix_path)
 
-    # Gene scoring (skipped if scores already in obs)
     cnc_genes     = ["SOX10", "TFAP2A", "PHOX2B"]
     schwann_genes = ["MPZ", "PLP1", "MBP"]
     if "cnc_score" not in adata_st.obs.columns:
@@ -182,13 +176,11 @@ def run_st_temporal_pipeline(st_metadata_path, st_matrix_path, save_dir):
     if "schwann_score" not in adata_st.obs.columns:
         adata_st = calculate_gene_scores(adata_st, "schwann_score", schwann_genes)
 
-    # Map weeks -> PCW label
     adata_st.obs["PCW"] = adata_st.obs["weeks"].map(WEEK_TO_PCW)
     unmapped = adata_st.obs["PCW"].isna().sum()
     if unmapped:
         print(f"  Warning: {unmapped} spots have unmapped week values.")
 
-    # Aggregate per PCW
     temp_df = (
         adata_st.obs
         .groupby("PCW", observed=True)[["cnc_score", "schwann_score"]]
@@ -237,7 +229,7 @@ def run_iss_phase(adata_iss, phase_label, save_dir):
     """Runs spatial scatter + neighbourhood enrichment for one PCW phase."""
     p_dir = setup_output_dir(os.path.join(save_dir, f"iss_{phase_label}"))
 
-    # --- Spatial scatter (matplotlib, no squidpy image dependency) ---
+    # --- Spatial scatter ---
     obs = adata_iss.obs.copy()
     obs["x"] = adata_iss.obsm["spatial"][:, 0]
     obs["y"] = adata_iss.obsm["spatial"][:, 1]
@@ -256,7 +248,7 @@ def run_iss_phase(adata_iss, phase_label, save_dir):
     plt.close()
     print(f"  Saved: {path}")
 
-    # --- Neighbourhood enrichment (squidpy) ---
+    # --- Neighbourhood enrichment ---
     add_spatial_uns(adata_iss, library_id=phase_label)
 
     adata_iss.obs["library_id"] = adata_iss.obs["library_id"].astype("category")
@@ -311,7 +303,6 @@ def run_scrna_trajectory(sc_path, save_dir):
 
     adata_sc = load_scrna(sc_path)
 
-    # Guard: check celltype column exists
     if "celltype" not in adata_sc.obs.columns:
         print("  Error: 'celltype' column not found. Skipping trajectory.")
         return
@@ -328,7 +319,6 @@ def run_scrna_trajectory(sc_path, save_dir):
 
     print(f"  Subset size: {subset.n_obs} cells")
 
-    # No count matrix available, so use obs metadata for a simple summary plot
     ct_counts = subset.obs["celltype"].value_counts()
     fig, ax = plt.subplots(figsize=(6, 4))
     ct_counts.plot(kind="bar", ax=ax, color=["steelblue", "coral"])
