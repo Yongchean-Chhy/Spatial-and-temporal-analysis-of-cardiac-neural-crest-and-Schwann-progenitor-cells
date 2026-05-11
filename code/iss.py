@@ -11,7 +11,7 @@ import squidpy as sq
 from scipy.stats import gaussian_kde
 from scipy.spatial import distance_matrix
 import matplotlib
-matplotlib.use("Agg")  # non-interactive backend — no windows, much faster in batch
+matplotlib.use("Agg") 
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import matplotlib.colors as mcolors
@@ -320,36 +320,33 @@ def compute_neighbors(adata, n_neighbors=6):
 def run_neighborhood_enrichment(adata, save_path=None, n_perms=100):
     if not hasattr(adata.obs["cell_type"], "cat"):
         adata.obs["cell_type"] = pd.Categorical(adata.obs["cell_type"])
-    # Default n_perms is 1000 — 100 is enough for exploratory work and ~10x faster
+
     sq.gr.nhood_enrichment(adata, cluster_key="cell_type", n_perms=n_perms)
     fig, ax = plt.subplots(figsize=(6, 5), facecolor=BG_COLOR)
     sq.pl.nhood_enrichment(adata, cluster_key="cell_type", ax=ax)
     if save_path:
         fig.savefig(save_path, dpi=150, bbox_inches="tight", facecolor=BG_COLOR)
         print(f"Neighborhood enrichment plot saved to: {save_path}")
-    plt.close(fig)  # don't render to screen — saves time in batch runs
+    plt.close(fig) 
 
 def run_cooccurrence(adata, save_path=None, max_cells=2000):
     if not hasattr(adata.obs["cell_type"], "cat"):
         adata.obs["cell_type"] = pd.Categorical(adata.obs["cell_type"])
 
-    # co_occurrence is O(n^2) in cells — subsample to keep it tractable
     adata_cooc = adata.copy()
     if adata_cooc.n_obs > max_cells:
         print(f"  Subsampling {adata_cooc.n_obs} → {max_cells} cells for co-occurrence (O(n²) step)")
         sc.pp.subsample(adata_cooc, n_obs=max_cells, copy=False, random_state=42)
 
-    # n_splits controls distance-bin resolution; 25 (vs default 50) halves the work
+
     sq.gr.co_occurrence(adata_cooc, cluster_key="cell_type", n_splits=25)
 
-    # sq.pl.co_occurrence manages its own axes — do not pass ax=
     sq.pl.co_occurrence(adata_cooc, cluster_key="cell_type")
     if save_path:
         plt.gcf().savefig(save_path, dpi=150, bbox_inches="tight", facecolor=BG_COLOR)
         print(f"Co-occurrence plot saved to: {save_path}")
     plt.close("all")
 
-    # Copy results back to main adata so the pipeline can save them
     adata.uns["cell_type_co_occurrence"] = adata_cooc.uns["cell_type_co_occurrence"]
 
 # ── Density / distance utilities ──────────────────────────────────────────────
@@ -507,7 +504,7 @@ def plot_spatial_cells_modular(adata, save_path=None, dapi_img=None, spot_df=Non
     if save_path:
         plt.savefig(save_path, dpi=150, facecolor=BG_COLOR, bbox_inches="tight")
         print(f"Spatial panel plot saved to: {save_path}")
-    plt.close("all")  # free memory — don't render to screen in batch runs
+    plt.close("all")  
 
 # ── Pipeline ──────────────────────────────────────────────────────────────────
 
@@ -562,7 +559,7 @@ def run_iss_analysis_pipeline(
     cell_coords.to_csv(centroids_path)
     print(f"Cell centroids saved to: {centroids_path}")
 
-    # Save assigned spots (if not already written by segment_cells_from_dapi)
+    # Save assigned spots 
     spots_path = results_path(tag, "assigned_spots.csv")
     assigned_spots.to_csv(spots_path, index=False)
     print(f"Assigned spots saved to: {spots_path}")
