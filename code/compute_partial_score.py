@@ -46,12 +46,11 @@ ST_META_PATH = os.path.join(
     "meta_data.tsv"
 )
 
-# ISS aggregation — set ISS_PATH to your file, or leave None to skip
-ISS_PATH         = None          # e.g. "iss_cells.csv"
+ISS_PATH         = None        
 ISS_X_COL        = "x"
 ISS_Y_COL        = "y"
-ISS_CELLTYPE_COL = "cell_type"   # set None if no cell-type column
-ST_SPOT_RADIUS   = 55            # µm — adjust for your platform
+ISS_CELLTYPE_COL = "cell_type"   
+ST_SPOT_RADIUS   = 55          
 
 CNC_MARKERS      = ["ISL1", "STMN2"]
 SCHWANN_MARKERS  = ["ALDH1A1"]
@@ -87,7 +86,7 @@ print("\nSTEP 2 — Marker-based cell scoring")
 target_cells = meta.index[meta["celltype"] == TARGET_LABEL].tolist()
 print(f"  Cells in target cluster: {len(target_cells)}")
 
-sub_expr = counts[target_cells].T          # cells x genes
+sub_expr = counts[target_cells].T        
 
 available_cnc     = [g for g in CNC_MARKERS     if g in sub_expr.columns]
 available_schwann = [g for g in SCHWANN_MARKERS if g in sub_expr.columns]
@@ -145,12 +144,10 @@ st_counts = pd.read_csv(ST_COUNT_PATH, sep="\t", index_col=0)
 st_meta   = pd.read_csv(ST_META_PATH,  sep="\t", index_col=0)
 print(f"  ST raw shape: {st_counts.shape[0]:,} genes x {st_counts.shape[1]:,} spots")
 
-# Strip Ensembl version numbers (ENSG00000123.4 -> ENSG00000123)
 st_counts.index = st_counts.index.astype(str).str.replace(
     r"\.\d+$", "", regex=True
 )
 
-# Diagnose ID format
 sample_ids = st_counts.index[:6].tolist()
 looks_like_ensembl = any(str(g).startswith("ENSG") for g in sample_ids)
 print(f"\n  Example ST gene IDs : {sample_ids}")
@@ -178,7 +175,6 @@ if looks_like_ensembl:
             verbose=False
         )
 
-        # Build id -> symbol dict, keeping first hit per ID
         id_to_sym = {}
         for eid, row in mapping.iterrows():
             if "symbol" in row and pd.notnull(row["symbol"]):
@@ -203,7 +199,6 @@ if looks_like_ensembl:
 else:
     print("\nSTEP 5 — ST genes already appear to be symbols, skipping Ensembl mapping.")
 
-# Deduplicate: two Ensembl IDs that map to the same symbol -> sum counts
 if st_counts.index.duplicated().any():
     n_dup = st_counts.index.duplicated().sum()
     print(f"  Deduplicating {n_dup} duplicated gene symbols (summing counts) ...")
